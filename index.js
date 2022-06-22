@@ -15,17 +15,8 @@ app.get('/', (req, res) => {
     res.send('Hello');
 })
 
-app.post('/auth/login', (req, res) => {
-    const token = jwt.sign({
-        email: req.body.email,
-        password: req.body.password
-    },
-        'secret123'
-    );
-
-    res.json({
-        token
-    });
+app.post('/auth/register', (req, res) => {
+    
 });
 
 app.listen(4444, (err) => {
